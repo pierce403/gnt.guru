@@ -73,6 +73,7 @@ ethereum.enable().then(function () {
                     {
                       document.getElementById("haveGNTW").textContent = "*yup*";
                       document.getElementById("unwrapButton").disabled=false;
+                      document.getElementById("msg").innerHTML = "READY FOR <a href='https://app.uniswap.org/#/swap?outputCurrency=0x936f78b9852d12f5cb93177c1f84fb8513d06263'>UNISWAP</a>";
                     }
                     else{
                       document.getElementById("haveGNTW").textContent = "*nope*";
