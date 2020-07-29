@@ -1,6 +1,38 @@
 <html>
 <body>
-Hello. I want to convert Golem Tokens (GNT) to Wrapped Golem Tokens (GNTW) back and fourth.<br>
-Using the wrapper that was used for EtherDelta at https://etherscan.io/address/0x936f78b9852d12f5cb93177c1f84fb8513d06263#code
+Convert Golem Tokens (GNT) to Wrapped Golem Tokens (GNTW) back and fourth.<br><br>
+
+<div id="msg">Please Enable Javascript</div><br>
+
+You have <span id="ethTotal">?</span> ETH,
+<span id="gntTotal">?</span> GNT, and
+<span id="gntwTotal">?</span> GNTW
+<br><br>
+
+<b>Convert GNT->GNTW</b><br>
+1. Have GNT: <span id="haveGNT">?</span><br>
+2. Have a GNTW Deposit Address: <span id="haveDepositAddress">?</span><button type="button" hidden=true id="createButton" onclick="create()">CREATE</button><br>
+3. Send GNT to Deposit Address: 
+<button type="button" disabled=true id="depositButton" onclick="deposit()">DEPOSIT</button>
+<input type="text" placeholder="3" size="3" id="depositAmount"><br>
+4. Have GNT in your Deposit Address: <span id="haveDeposit">?</span><br>
+5. Claim GNTW: <button type="button" disabled=true id="claimButton" onclick="claim()">CLAIM</button><br>
+<br><br>
+<b>Convert GNTW->GNT</b><br>
+1. Have GNTW: <span id="haveGNTW">?</span><br>
+2. Send GNTW to Wrapper:
+<button type="button" disabled=true id="unwrapButton" onclick="unwrap()">UNWRAP</button>
+<input type="text" placeholder="3" size="3" id="unwrapAmount"><br> 
+
+<br><br>
+<b>Info:</b><br>
+Using the wrapper that was used for EtherDelta at https://etherscan.io/address/0x936f78b9852d12f5cb93177c1f84fb8513d06263#code<br>
+More info on how to use the wrapper here: https://np.reddit.com/r/ethereum/comments/5cs2n4/erc20compliant_wrapper_token_for_gnt_will_enable/<br>
+This site was created because the original EtherDelta converter was broken: https://etherdelta.com/gntw.html<br>
+Buy/Sell/Pool on Unwap here: https://app.uniswap.org/#/swap?outputCurrency=0x936f78b9852d12f5cb93177c1f84fb8513d06263<br>
+Send pull requests here: https://github.com/pierce403/gnt.guru<br>
+
+<script src="ethers-v4.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
