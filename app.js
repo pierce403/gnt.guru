@@ -135,11 +135,18 @@ function deposit()
     })
 }
 
+function create()
+{
+    // create the deposit address
+    gntwContract.createPersonalDepositAddress().then(function (value){
+        console.log("deposit address created "+value);
+    }) 
+}
+
 function claim()
 {
     // send over the GNT to the deposit address
-    gntwContract.processDeposit().then(function (value)
-    {
+    gntwContract.processDeposit().then(function (value){
         console.log("claim complete "+value);
     })    
 }
