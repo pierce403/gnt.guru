@@ -19,6 +19,7 @@ let gntAbi = [
 
 let gntwAbi = [
     "function balanceOf(address) public view returns(uint256)",
+    "function createPersonalDepositAddress() public returns(address)",
     "function getPersonalDepositAddress(address) public view returns (address)",
     "function processDeposit() public returns(null)",
     "function transfer(address to, uint256 amount) returns (bool success)"
