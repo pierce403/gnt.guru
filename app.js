@@ -130,7 +130,7 @@ function deposit()
     console.log("sending GNT to deposit address");
 
     // send over the GNT to the deposit address
-    gntContract.transfer(depositAddress,String(ethers.constants.WeiPerEther*depositAmount)).then(function (value) {
+    gntContract.transfer(depositAddress,ethers.constants.WeiPerEther*depositAmount).then(function (value) {
     //gntContract.transfer(depositAddress,"3000000000000000000").then(function (value) {
         console.log("deposit complete "+value);
     })
