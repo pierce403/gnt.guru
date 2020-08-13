@@ -164,7 +164,7 @@ function unwrap()
     console.log("unwraping GNTW");
 
     // unwrap GNTW
-    gntwContract.transfer(gntwAddress,String(ethers.constants.WeiPerEther*unwrapAmount)).then(function (value) {
+    gntwContract.transfer(gntwAddress,web3.toWei(unwrapAmount)).then(function (value) {
         console.log("unwrap complete "+value);
     })    
 }
