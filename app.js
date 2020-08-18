@@ -146,7 +146,7 @@ function create()
 
 function claim()
 {
-    // send over the GNT to the deposit address
+    // claim the GNTW from GNT in the deposit address
     gntwContract.processDeposit().then(function (value){
         console.log("claim complete "+value);
     })    
